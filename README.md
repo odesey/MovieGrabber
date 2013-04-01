@@ -29,3 +29,4 @@ You should get a binding.pry prompt with film information for "Jaws". We're goin
   * Add a method to print all the movies in the database
   * Add a method to search for all the movies in the database.
   * Amend the program any way you see fit.
+* When you're done, send me a pull request
