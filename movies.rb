@@ -44,7 +44,7 @@ while ((input = gets.strip.chomp) != 'q') do
     puts "#{input}"
     name = Movie.get_film_info(input)
     binding.pry
-
+    puts "Movie Directory, v0.0.2 by Ed"
     print "Enter the name of a movie to adde to the database or press q to save and quit: "
 
 end
