@@ -20,14 +20,14 @@ class Movie
 
   def self.get_film_info(name)
     binding.pry
-    name = gets.chomp
-    puts "Adding #{name} to the database."    
+    # name = gets.chomp
+    puts 'Adding "#{name}" to the database.'
     imdb_data = HTTParty.get("http://www.omdbapi.com/?t=#{name}")
     movie_info = JSON(imdb_data)
     binding.pry
 
     # Create a Movie object...
-    # m = Movie.new
+    new_movie = Movie.new
 
     # Fill in the attributes...
 
@@ -36,4 +36,15 @@ class Movie
 
 end
 
-Movie.new
+puts "Movie Directory, v0.0.2 by Ed"
+print "Enter the name of a movie to adde to the database or press q to save and quit: "
+
+
+while ((input = gets.strip.chomp) != 'q') do
+    puts "#{input}"
+    name = Movie.get_film_info(input)
+    binding.pry
+
+    print "Enter the name of a movie to adde to the database or press q to save and quit: "
+
+end
